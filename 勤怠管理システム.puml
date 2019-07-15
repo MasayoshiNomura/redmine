@@ -1,0 +1,20 @@
+@startuml
+:Main Admin: as Admin
+(Use the application) as (Use)
+
+User -> (Start)
+User --> (Use)
+
+Admin ---> (Use)
+
+note right of Admin : 月々のユーザの勤怠を管理する
+
+note right of (Use)
+A note can also
+be on several lines
+end note
+
+note "ユーザー登録ができて\nwebサービスが使用できること。" as N2
+(Start) .. N2
+N2 .. (Use)
+@enduml
